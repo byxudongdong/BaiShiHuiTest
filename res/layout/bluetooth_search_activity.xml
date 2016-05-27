@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/search_scrollView" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="#ffffff"
+                    android:textSize="24dp"
+                    android:text="@string/label_state" />
+
+                <com.bluetooth.SlideSwitchView
+                    android:id="@+id/lanya_shezhi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:checked="false" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/peidui_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:textSize="24dp"
+                android:text="@string/bluetooth_scan_connect_w16"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/scan_connection_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="24dp"
+                android:gravity="center_horizontal"
+                android:text="@string/bluetooth_scan_noconnect_w16"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/scan_connection_device"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textSize="24dp"
+                android:textColor="#cccccc" />
+
+            <Button
+                android:id="@+id/search_blue_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="24dp"
+                android:background="@drawable/single_layout_selector"
+                android:text="@string/bluetooth_scan_device"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+</LinearLayout>

@@ -1,0 +1,249 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#000000"
+            android:orientation="horizontal" >
+
+            <TextView android:id="@+id/workday_daocount"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:textColor="#eefb05"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/arrive_number_count"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:gravity="left"
+                android:text="0票"
+                android:textColor="#eefb05"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/upload_daojian_flag"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="-10dp"
+                android:background="@drawable/upload_64" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="上 一 站:"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_edittext_select" >
+
+                <EditText
+                    android:id="@+id/daonextname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_edittext_select"
+                    android:singleLine="true"
+                    android:textSize="24dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/daoverify"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#007799"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="验证"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="任 务 单:"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_edittext_select" >
+
+                <EditText
+                    android:id="@+id/daoworkorder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_edittext_select"
+                    android:singleLine="true"
+                    android:textSize="24dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/daonolock"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#007799"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="未锁"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="运 单 号:"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_edittext_select" >
+
+                <EditText
+                    android:id="@+id/daowaybillnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_edittext_select"
+                    android:singleLine="true"
+                    android:textSize="24dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:padding="2dp" >
+
+            <com.baishihuitong.untils.ListViewCompat
+                android:id="@+id/arriver_listview"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dip"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/daofanhui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+
+            <Button
+                android:id="@+id/daodelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+
+            <Button
+                android:id="@+id/daoqueding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dao_dialog_progress_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="#eeeeee"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/sercice_dialog_progress"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:text="@string/bluetooth_scan_activity_dialog"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+</FrameLayout>

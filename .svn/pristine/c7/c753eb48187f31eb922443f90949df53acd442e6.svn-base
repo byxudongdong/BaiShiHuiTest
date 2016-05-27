@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="0dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout1"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:text="操作日期"
+            android:textSize="24dp"
+            android:gravity="center"
+            android:textColor="#ffffff"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="115dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#79C0AE" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:text="查询"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout2"
+        android:layout_centerHorizontal="true" >
+
+        <com.baishihuitong.untils.ListViewCompat
+            android:id="@+id/dlistview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </com.baishihuitong.untils.ListViewCompat>
+    </RelativeLayout>
+
+</RelativeLayout>

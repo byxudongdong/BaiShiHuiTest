@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.baishihuitong"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="21" />
+    <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+       <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+<uses-permission android:name="android.permission.WAKE_LOCK"/>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo3"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+         >
+          <activity android:name="com.example.baishihuitong.BusinessActivity"></activity>
+          <activity android:name="com.example.baishihuitong.SettingActivity"></activity>
+          <activity android:name="com.example.baishihuitong.BusinessselectActivity"></activity>
+          <activity android:name="com.example.baishihuitong.TimeselectActivity"></activity>
+          <activity android:name="com.example.baishihuitong.SendscanActivity"></activity>
+          <activity android:name="com.example.baishihuitong.PacketscanningActivity"></activity>
+        
+         <activity android:name="LoginActivity">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN"/>
+                 <category android:name="android.intent.category.LAUNCHER"/>
+             </intent-filter>
+         </activity>
+         <activity android:name="sendupSet.SendupSet"></activity>
+         <activity android:name="com.bluetooth.BluetoothSearchActivity"></activity>
+         <activity android:name="com.bluetooth.DeviceScanActivity"></activity>
+         <service android:name="com.bluetooth.BluetoothLeService"></service>
+		<service android:name="com.example.baishihuitong.PacketServices"></service>
+		<activity android:name="com.arrive.ArrivescanActivity"></activity>
+		<activity android:name="com.query.FajianQueryByTime"></activity>
+		<activity android:name="com.query.FajianQueryBytoday"></activity>
+		<activity android:name="com.packages.PackscanActivity"></activity>
+		<activity android:name="com.query.DaoJianQueryByTime"></activity>
+		<activity android:name="com.query.DaoJianQueryBytoday"></activity>
+		<activity android:name="com.query.JiBaoQueryByTime"></activity>
+		<activity android:name="com.query.JiBaoQueryBytoday"></activity>
+		<activity android:name="com.query.SearchDaoJian_Every_dayActivity"></activity>
+		<activity android:name="com.query.SearchJiBao_Every_dayActivity"></activity>
+		<activity android:name="com.query.SearchFaJian_Every_dayActivity"></activity>
+		<activity android:name="sendupSet.SystemServiceSendSet"></activity>
+		<activity android:name="MenuMainActivity"></activity>
+		<receiver android:name="userMessage.BootBroadcastReceiver">
+		    <intent-filter>
+			    <action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+		<activity android:name="com.delet.data.DeleScanDataActivity"></activity>
+    </application>
+</manifest>

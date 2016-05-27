@@ -1,0 +1,260 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#393C36" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="目 的 站:"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_edittext_select" >
+
+                <EditText
+                    android:id="@+id/packnextname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_edittext_select"
+                    android:singleLine="true"
+                    android:textSize="24dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/packverify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="3dp"
+                android:text="验证"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="包      号:"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_edittext_select" >
+
+                <EditText
+                    android:id="@+id/packworkorder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_edittext_select"
+                    android:imeOptions="actionSend"
+                    android:singleLine="true"
+                    android:textSize="24dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/packnolock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="3dp"
+                android:text="未锁"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="运 单 号:"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_edittext_select" >
+
+                <EditText
+                    android:id="@+id/packwaybillnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/my_edittext_select"
+                    android:imeOptions="actionSend"
+                    android:singleLine="true"
+                    android:textSize="24dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
+            android:background="#ffffff"
+            android:padding="3dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:padding="2dp" >
+
+
+
+                <TextView
+                    android:id="@+id/textViews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/daolistvie"
+                    android:layout_centerHorizontal="true"
+                    android:text="0"
+                    android:textColor="#eefb05"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/daolistvie"
+                    android:layout_toRightOf="@+id/textViews"
+                    android:text="票"
+                    android:textColor="#eefb05"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/daolistvie"
+                    android:layout_toLeftOf="@+id/textViews"
+                    android:background="#000000"
+                    android:text="票/"
+                    android:textColor="#eefb05"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/numbertex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/textview"
+                    android:background="#000000"
+                    android:text="0"
+                    android:textColor="#eefb05"
+                    android:textSize="24dp" />
+                
+                <ListView
+                    android:id="@+id/daolistvie"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/numbertex"
+                    android:background="#000000" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/packfanhui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+
+            <Button
+                android:id="@+id/packdelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+
+            <Button
+                android:id="@+id/packqueding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="#F7F7F7"
+                android:textSize="24dp" />
+        </LinearLayout>
+    </LinearLayout>
+<LinearLayout
+        android:id="@+id/dialog_progress_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="#eeeeee"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/sercice_dialog_progress"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:textSize="24dp"
+            android:text="@string/bluetooth_scan_activity_dialog" />
+    </LinearLayout>
+</FrameLayout>

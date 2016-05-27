@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#000000">
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+   
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" 
+        android:layout_centerHorizontal="true"
+    
+        >
+
+         <Button
+            android:onClick="onclick"
+            android:id="@+id/shangchuangbutton"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_button_selector"
+            android:text="@string/shangchuan_jilu" />
+         <Button
+            android:onClick="onclick"
+            android:id="@+id/shangsetingbutton"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shangchuangbutton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_button_selector"
+            android:text="@string/shangchuan_set" />
+         
+          <Button
+            android:onClick="onclick"
+            android:id="@+id/lypairbutton"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shangsetingbutton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_button_selector"
+            android:text="@string/bluetooth_set" />
+         
+          <Button
+            android:onClick="onclick"
+            android:id="@+id/timetongbutton"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lypairbutton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_button_selector"
+            android:text="@string/time_stape" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout1"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        >
+       <Button
+            android:onClick="onclick"
+            android:id="@+id/settingback_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_button_selector"
+            android:text="@string/return_view" />
+    </RelativeLayout>
+ </RelativeLayout>
+</ScrollView>

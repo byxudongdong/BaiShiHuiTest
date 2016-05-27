@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">百世快递</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+	<string name="background_light">背光设置</string>
+	<string name="windows_save_set">屏保设置</string>
+	<string name="shangchuan_jilu">服务器设置</string>
+	<string name="shangchuan_set">上传设置</string>
+	<string name="jierudian_set">接入点设置</string>
+	<string name="gongzuorizhi">工作日设置</string>
+	<string name="bluetooth_set">蓝牙配对</string>
+	<string name="wifi_set">WIFI设置</string>
+	<string name="time_set">时间设置</string>
+	<string name="time_stape">应用升级</string>
+	<string name="return_view">返回</string>
+	<string name="label_state">连接状态:</string>
+	<string name="ble_not_supported">BLE is not supported</string>
+	
+	<string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+	<string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    
+     <string name="menu_connect">未连接</string>
+    <string name="menu_disconnect">已连接</string>
+     <string name="menu_share">share</string>
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+    
+     <string name="unknown_device">Unknown device</string>
+     <string name="unknown_service">Unknown service</string>
+     <string name="unknown_characteristic">Unknown characteristic</string>
+     
+	<string name="bluetooth_open">开启蓝牙</string>
+	 <string name="connect_close">连接断开</string>
+    <string name="SERVICES_COVERED">服务已连接</string>
+    <string name="SERVICES_DISCOVERED">未找到该服务</string>
+    <string name="menu_disconnect_new">已连接，若要连接其他设备，请先断开连接</string>
+    
+	 <string name="bluetooth_scan_activity_dialog">正在连接服务，请稍后...</string>
+    <string name="bluetooth_scan_connect_w16">已配对的设备:</string>
+    <string name="bluetooth_scan_noconnect_w16">暂无设备连接</string>
+    <string name="bluetooth_scan_device">搜索设备</string>
+	
+	<string name="sendUp_message">说明:选择[自动],手表会根据[条数阀值]和[延迟时间]自动发送记录(未传记录大于条数阀值或距最后扫描时间超过延迟时间),此时仍可通过【系统设置->上传记录】来启动上传;\
+选择[手动],则只能通【系统设置->上传记录】来启动上传.</string>
+
+	<string name="send_service_http">说明：操作记录上传和资料下载的地址，请正确填写，否则业务数据将无法上传。</string>
+	
+	
+	
+	
+	
+	
+</resources>

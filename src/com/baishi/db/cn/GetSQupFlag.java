@@ -1,0 +1,174 @@
+package com.baishi.db.cn;
+
+import java.util.ArrayList;
+
+import com.arrive.ArrivescanActivity;
+import com.arrive.DaoJianSQLite;
+import com.example.baishihuitong.SendscanActivity;
+import com.packages.JiBaoSQLite;
+import com.packages.PackscanActivity;
+
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+public class GetSQupFlag {
+	public GetSQupFlag() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static ArrayList<FaJianSQLite> faJianSQLite = new ArrayList<FaJianSQLite>();
+	public static ArrayList<DaoJianSQLite> daojianSQLite = new ArrayList<DaoJianSQLite>();
+	public static ArrayList<JiBaoSQLite> JiBaoSQLite = new ArrayList<com.packages.JiBaoSQLite>();
+	public static ArrayList<FaJianSQLite> FaJianSQ(SQLiteDatabase database,
+			int send_up_flag) {
+		faJianSQLite.clear();
+		Cursor cursor = database.rawQuery(
+				"select * from BaiShiFajian WHERE send_up_flag=?",
+				new String[] { String.valueOf(send_up_flag) });
+		while (cursor.moveToNext()) {
+			int uid2 = cursor.getInt(cursor.getColumnIndex("_id"));
+			String billCode = cursor.getString(cursor
+					.getColumnIndex("BillCode"));
+			String nextSite = cursor.getString(cursor
+					.getColumnIndex("NextSite"));
+			String scanTime = cursor.getString(cursor
+					.getColumnIndex("ScanTime"));
+			String scanDate = cursor.getString(cursor
+					.getColumnIndex("ScanDate"));
+			String vehicleNo = cursor.getString(cursor
+					.getColumnIndex("VehicleNo"));
+			String x_Auth_User = cursor.getString(cursor
+					.getColumnIndex("X_Auth_User"));
+			String x_Auth_Site = cursor.getString(cursor
+					.getColumnIndex("X_Auth_Site"));
+
+			FaJianSQLite user = new FaJianSQLite();
+
+			user.setBillCode(billCode.replace("@", ""));
+			user.setNextSite(nextSite);
+			user.setScanTime(scanTime);
+			user.setScanDate(scanDate);
+			user.setVehicleNo(vehicleNo);
+			user.setIndex(uid2);
+			user.setX_Auth_User(x_Auth_User.replace("_", "."));
+			user.setX_Auth_Site(x_Auth_Site);
+			faJianSQLite.add(user);
+			if(faJianSQLite.size() == SendscanActivity.num_count_limit){
+				break;
+			}
+		}
+		cursor.close();
+		return faJianSQLite;
+	}
+	
+	public static int[] getTableIndex(SQLiteDatabase database,String billcode,String tableName){
+		
+		Cursor cursor = database.rawQuery(
+				"select * from " + tableName +" WHERE BillCode=?",
+				new String[] { String.valueOf(billcode) });
+		int uid = 0;
+		int[] mtable_index = new int[2];
+		while(cursor.moveToNext()){
+			uid=cursor.getInt(cursor.getColumnIndex("_id"));
+			int send_flag = cursor.getInt(cursor.getColumnIndex("send_up_flag"));
+			mtable_index[0] = uid;
+			mtable_index[1] = send_flag;
+		}
+		return mtable_index;
+	}
+	
+	public static ArrayList<DaoJianSQLite> DaoJianSQ(SQLiteDatabase database,
+			int send_up_flag) {
+		daojianSQLite.clear();
+		Cursor cursor = database.rawQuery(
+				"select * from BaiShiDaojian WHERE send_up_flag=?",
+				new String[] { String.valueOf(send_up_flag) });
+		while(cursor.moveToNext()){
+			int uid2=cursor.getInt(cursor.getColumnIndex("_id"));
+			String billCode=cursor.getString(cursor.getColumnIndex("BillCode"));
+			String preSite=cursor.getString(cursor.getColumnIndex("PreSite"));
+			String scanTime=cursor.getString(cursor.getColumnIndex("ScanTime"));
+			String scanDate = cursor.getString(cursor.getColumnIndex("ScanDate"));
+			String vehicleNo=cursor.getString(cursor.getColumnIndex("VehicleNo"));
+			String x_Auth_User = cursor.getString(cursor
+					.getColumnIndex("X_Auth_User"));
+			String x_Auth_Site = cursor.getString(cursor
+					.getColumnIndex("X_Auth_Site"));
+
+			DaoJianSQLite user = new DaoJianSQLite();
+			user.setBillCode(billCode.replace("@", ""));
+			user.setPreSite(preSite);
+			user.setScanTime(scanTime);
+			user.setScanDate(scanDate);
+			user.setVehicleNo(vehicleNo);
+			user.setIndex(uid2);
+			user.setX_Auth_Site(x_Auth_Site);
+			user.setX_Auth_User(x_Auth_User.replace("_", "."));
+			daojianSQLite.add(user);
+			if(daojianSQLite.size() == ArrivescanActivity.num_count_limit){
+				break;
+			}
+		}
+		cursor.close();
+		return daojianSQLite;
+	}
+	
+	public static ArrayList<JiBaoSQLite> JiBaoSQ(SQLiteDatabase database,
+			int send_up_flag) {
+		JiBaoSQLite.clear();
+		Cursor cursor = database.rawQuery(
+				"select * from BaiShiJiBao WHERE send_up_flag=?",
+				new String[] { String.valueOf(send_up_flag) });
+		while(cursor.moveToNext()){
+			int uid2=cursor.getInt(cursor.getColumnIndex("_id"));
+			String billCode=cursor.getString(cursor.getColumnIndex("BillCode"));
+			String preSite=cursor.getString(cursor.getColumnIndex("DestinationSite"));
+			String scanTime=cursor.getString(cursor.getColumnIndex("ScanTime"));
+			String scanDate = cursor.getString(cursor.getColumnIndex("ScanDate"));
+			String vehicleNo=cursor.getString(cursor.getColumnIndex("BagNumber"));
+			String x_Auth_User = cursor.getString(cursor
+					.getColumnIndex("X_Auth_User"));
+			String x_Auth_Site = cursor.getString(cursor
+					.getColumnIndex("X_Auth_Site"));
+			JiBaoSQLite user = new JiBaoSQLite();
+			user.setBillCode(billCode.replace("@", ""));
+			user.setDestinationSite(preSite);
+			user.setScanTime(scanTime);
+			user.setScanDate(scanDate);
+			user.setBagNumber(vehicleNo);
+			user.setIndex(uid2);
+			user.setX_Auth_Site(x_Auth_Site);
+			user.setX_Auth_User(x_Auth_User.replace("_", "."));
+			JiBaoSQLite.add(user);
+			if(JiBaoSQLite.size() == PackscanActivity.num_count_limit){
+				break;
+			}
+		}
+		cursor.close();
+		return JiBaoSQLite;
+	}
+
+	public static void updataFaJian(SQLiteDatabase database,String number) {
+		ContentValues values = new ContentValues();
+		values.put("send_up_flag", "1");
+		database.update("BaiShiFajian", values, "BillCode=?",
+				new String[] { "@" + number });
+	}
+	
+	public static void updataDaoJian(SQLiteDatabase database,String number) {
+		ContentValues values = new ContentValues();
+		values.put("send_up_flag", "1");
+		database.update("BaiShiDaojian", values, "BillCode=?",
+				new String[] { "@" + number });
+	}
+	
+	public static void updataJiBao(SQLiteDatabase database,String number) {
+		ContentValues values = new ContentValues();
+		values.put("send_up_flag", "1");
+		database.update("BaiShiJiBao", values, "BillCode=?",
+				new String[] { "@" + number });
+	}
+
+}
